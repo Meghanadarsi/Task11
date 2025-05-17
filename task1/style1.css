@@ -1,0 +1,104 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  scroll-behavior: smooth;
+  background: #fafafa;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(90deg, #ff6ec4, #7873f5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.navbar.scrolled {
+  background: linear-gradient(90deg, #00c9ff, #92fe9d);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  position: relative;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ffd700;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  left: 0;
+  bottom: -5px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.buy-btn {
+  background-color: #ffffff;
+  color: #ff6ec4;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.buy-btn:hover {
+  background-color: #ff6ec4;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.content {
+  padding-top: 100px;
+}
+
+section {
+  height: 100vh;
+  padding: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+section:nth-child(even) {
+  background: #f0f0f0;
+}
